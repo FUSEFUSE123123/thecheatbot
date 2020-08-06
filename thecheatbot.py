@@ -37,4 +37,4 @@ async def on_member_remove(member):
         await hello.send(embed=embed)
 
 access.token = os.environ["BOT_TOKEN"]
-client.run(access.token)
+client.run(access_token)
