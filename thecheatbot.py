@@ -1,11 +1,9 @@
 import discord
-
-
+import os
 
 client = discord.Client()
 bot = discord.Client()
 
-token = "NzQwODk1NTYwMTkzNjcxMjkw.Xyvqwg.C8C9hM4AhMi-OkbRMFacqOaKb0U"
 
 adminid = [435025892650123277] 
 
@@ -38,4 +36,5 @@ async def on_member_remove(member):
         hello = client.get_channel(739872922990280807)
         await hello.send(embed=embed)
 
-client.run(token)
+access.token = os.environ["BOT_TOKEN"]
+client.run(access.token)
